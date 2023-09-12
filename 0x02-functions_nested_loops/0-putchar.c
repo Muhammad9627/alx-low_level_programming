@@ -1,8 +1,10 @@
 #include "main.h"
 	/**
-	 * main - print _putchar
-	 * is written by mbah
-	 * Return: 0
+	 * main  - function that prints _putchar
+	 *This is the main function.
+   It prints "_putchar" followed by a newline.
+   Returns 0 to indicate successful execution.
+	 * Return: return 0;
 	 */
 
 
