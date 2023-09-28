@@ -1,32 +1,44 @@
-#include "main.h"
+#include <stdio.h>
+#include <string.h>
 
 /**
- * is_palindrome - Checks if a string is a palindrome
- * @s: The string to check
+ * is_palindrome - Check if a string is a palindrome.
+ * @s: The string to check.
  *
- * Return: 1 if the string is a palindrome, 0 otherwise
+ * Return: 1 if s is a palindrome, 0 otherwise.
  */
 int is_palindrome(char *s)
 {
-    int length = 0;
     int i, j;
+    int len = strlen(s);
 
-    if (!s || *s == '\0')
-        return (1);
-
-    while (s[length] != '\0')
-        length++;
-
-    for (i = 0, j = length - 1; i < j; i++, j--)
+    for (i = 0, j = len - 1; i < j; i++, j--)
     {
-        while (s[i] == ' ')
-            i++;
-        while (s[j] == ' ')
-            j--;
-
+        // If characters at the current positions are not equal, it's not a palindrome.
         if (s[i] != s[j])
-            return (0);
+            return 0;
     }
 
-    return (1);
+    // If we reach this point, the string is a palindrome.
+    return 1;
 }
+
+int main(void)
+{
+    int r;
+
+    r = is_palindrome("level");
+    printf("%d\n", r);
+    
+    r = is_palindrome("redder");
+    printf("%d\n", r);
+    
+    r = is_palindrome("test");
+    printf("%d\n", r);
+    
+    r = is_palindrome("step on no pets");
+    printf("%d\n", r);
+
+    return (0);
+}
+
