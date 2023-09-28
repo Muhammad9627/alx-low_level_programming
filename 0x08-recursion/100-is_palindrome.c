@@ -14,12 +14,12 @@ int is_palindrome(char *s)
 
     for (i = 0, j = len - 1; i < j; i++, j--)
     {
-        // If characters at the current positions are not equal, it's not a palindrome.
+        /* If characters at the current positions are not equal, it's not a palindrome. */
         if (s[i] != s[j])
             return 0;
     }
 
-    // If we reach this point, the string is a palindrome.
+    /* If we reach this point, the string is a palindrome. */
     return 1;
 }
 
@@ -41,4 +41,3 @@ int main(void)
 
     return (0);
 }
-
